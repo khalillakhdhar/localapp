@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Task } from 'src/app/core/models/task';
 
 @Component({
@@ -9,8 +10,9 @@ import { Task } from 'src/app/core/models/task';
 export class AddtaskComponent {
 task=new Task();
 tasks=Array<Task>();
+// ajouter router navigation
 
-  constructor() {
+  constructor(private router: Router) {
 // lire tasks depuis le local storage
     let tasks=localStorage.getItem('tasks');
     if(tasks){
@@ -29,5 +31,10 @@ tasks=Array<Task>();
     this.task=new Task(); // vider le formulaire
     window.location.reload();
   }
+deconnexion(){
+  //localStorage.removeItem('user');
+  localStorage.clear();
 
+  this.router.navigate(['../']);
+}
 }

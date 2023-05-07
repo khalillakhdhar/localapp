@@ -19,9 +19,9 @@ export class AuthComponent {
     else
     {
       this.users=[];
-      alert("Please subscribe first");
+      //alert("Please subscribe first");
       // redirect to subscribe page
-      window.location.replace("user/register");
+     // window.location.replace("user/register");
 
 
     }
