@@ -5,6 +5,7 @@ import { TaskRoutingModule } from './task-routing.module';
 import { TaskComponent } from './task.component';
 import { AddtaskComponent } from './addtask/addtask.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { TasksComponent } from './tasks/tasks.component';
   ],
   imports: [
     CommonModule,
-    TaskRoutingModule
+    TaskRoutingModule,
+    FormsModule
   ]
 })
 export class TaskModule { }

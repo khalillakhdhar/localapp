@@ -1,1 +1,39 @@
-<p>addtask works!</p>
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col">
+      <form (submit)="addTask()">
+        <div class="mb-3">
+          <label  class="form-label">Titre</label>
+          <input type="text" name="nom" [(ngModel)]="task.titre" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Description</label>
+          <textarea name="description" [(ngModel)]="task.description" class="form-control">
+            </textarea>
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Date du début</label>
+          <input type="datetime-local" name="date" [(ngModel)]="task.debut" class="form-control">
+
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Date de fin</label>
+          <input type="datetime-local" min="{{task.debut}}" name="date" [(ngModel)]="task.fin" class="form-control">
+
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-primary" type="submit">ajouter tache</button>
+          </div>
+
+      </form>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+</div>
+
+<app-tasks></app-tasks>
